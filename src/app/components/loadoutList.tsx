@@ -46,7 +46,7 @@ export default function LoadoutList({ data }: Props) {
       <Flex justifyContent={"center"} mt={8} maxW="83rem">
         <Flex gap={10} alignItems={"center"}>
           <Select
-            bgColor={"#E2E8F0"}
+            bgColor={"#e4e4e4"}
             borderRadius={6}
             value={selectedOption}
             onChange={handleSelectChange}
@@ -88,15 +88,16 @@ export default function LoadoutList({ data }: Props) {
                 <Box
                   key={loadout.slug.current}
                   textColor={"#D9D9D9"}
-                  pb={"1.5rem"}
+                  pb={"0.75rem"}
                   mb={"2rem"}
                   border={"2px solid red"}
                   pt={1}
                   borderRadius={4}
-                  boxShadow={
-                    "5px -5px 50px 10px red inset, -5px 0px 50px 10px red inset, 5px 10px 30px 0px red, -10px 0px 30px 0px red"
-                  }
-                  bgColor={"#001f3f"}
+                  boxShadow={"5px -5px 50px 10px red inset"}
+                  //-5px 0px 50px 10px red inset, 5px 10px 30px 0px red, -10px 0px 30px 0px red
+                  //bgColor={"#001f3f"}
+                  bgColor={"rgba(0, 31, 63, 0.6)"}
+                  backdropFilter={"blur(2px)"}
                 >
                   <Flex justifyContent={"space-around"} alignItems={"center"}>
                     <Flex
@@ -119,19 +120,39 @@ export default function LoadoutList({ data }: Props) {
                       </Text>
                     </Flex>
 
-                    <Flex gap={4} fontSize={18} mx={"1rem"}>
-                      <Text my={0}> Level Range: </Text>
-                      <Text textColor={"#F5C400"} my={0}>
+                    <Flex
+                      gap={2}
+                      fontSize={18}
+                      bgColor={"rgba(0, 0, 0, .4)"}
+                      px={2}
+                      borderRadius={5}
+                    >
+                      <Text my={0} textColor={"white"}>
                         {" "}
-                        {loadout.levelRange == 1
-                          ? "1-4"
-                          : loadout.levelRange == 2
-                          ? "5-7"
-                          : "8-9"}
+                        Level Range:{" "}
                       </Text>
+                      <Flex>
+                        <Text textColor={"#F5C400"} my={0}>
+                          {" "}
+                          {loadout.levelRange == 1
+                            ? "1-4"
+                            : loadout.levelRange == 2
+                            ? "5-7"
+                            : "8-9"}
+                        </Text>
+                      </Flex>
                     </Flex>
-                    <Flex gap={4} fontSize={18} mx={"1rem"}>
-                      <Text my={0}> Enemy Type: </Text>
+                    <Flex
+                      gap={2}
+                      fontSize={18}
+                      bgColor={"rgba(0, 0, 0, .4)"}
+                      px={2}
+                      borderRadius={5}
+                    >
+                      <Text my={0} textColor={"white"}>
+                        {" "}
+                        Enemy Type:{" "}
+                      </Text>
                       <Text textColor={"#F5C400"} my={0}>
                         {" "}
                         {loadout.enemyType}

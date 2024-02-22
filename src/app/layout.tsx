@@ -25,9 +25,9 @@ export default function RootLayout({
           <Box
             justifyContent={"center"}
             textAlign={"center"}
-            py={"2rem"}
-            backgroundImage={"/images/splash/hd2-hero.webp"}
-            backgroundSize={"contain"}
+            py={"6rem"}
+            backgroundImage={"/images/splash/hd2-hero.jpg"}
+            //backgroundSize={"contain"}
             backgroundRepeat={"repeat-y"}
             backgroundPosition={"0% 0%"}
             minH={"200vh"}

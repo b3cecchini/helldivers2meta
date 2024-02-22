@@ -9,6 +9,7 @@ import {
   List,
   ListItem,
   useDisclosure,
+  Text,
 } from "@chakra-ui/react";
 
 import { useRouter, usePathname } from "next/navigation";
@@ -21,59 +22,22 @@ export const Nav = () => {
 
   return (
     <Flex
-      flexDir="column"
-      boxShadow="1px 0 5px rgba(0, 0, 0, 0.73)"
-      zIndex={6}
-      transition="background 360ms ease-out"
-      bg={"#5591a9"}
+      pos={"absolute"}
+      boxShadow="1px 0 5px rgba(0, 0, 0, 0.7)"
+      zIndex={4}
+      w={"100vw"}
+      bgColor={"rgba(0, 31, 63, 0.6)"}
+      //backdropFilter={"contrast(30%)"}
     >
-      <Container
-        alignItems="center"
-        justifyContent="space-between"
-        display="flex"
-        w="100%"
-        variant="main"
-      >
-        <Flex alignItems="center">
-          <Link href="/" title="Home">
-            {/* <Logo w='5.4375rem' h='1.8rem' /> LOGO IMAGE HERE*/}
-          </Link>
-        </Flex>
-        <Flex alignItems="center">
-          <Box
-            display={{ base: "block", lg: "block" }}
-            w="1px"
-            h="1.5rem"
-            mx={6}
-            bg="rgba(255, 255, 255, 0.2)"
-          />
-
-          {/* <MobileNav HERE*/}
-        </Flex>
-      </Container>
-      <Box
-        id="box_1"
-        display={{ base: "none", lg: "flex" }}
-        w="100%"
-        bg="bg.800"
-      >
-        {/* <Container
-          id="nav_container"
-            zIndex={1}
-            alignItems='center'
-            justifyContent='center'
-            display='flex'
-            w='100%'
-            h={{ base: 12, lg: 12 }}
-            variant='main'
-          > */}
+      <Box display={{ base: "none", lg: "flex" }} w="100%">
         <Box
           id="nav_box"
           as="nav"
           zIndex={1}
           ms={{ base: -3, lg: 0 }}
           h={{ base: 12, lg: 12 }}
-          pl={5}
+          pl={10}
+          my={2}
         >
           <List
             flexDir={{ base: "column", lg: "row" }}
@@ -84,24 +48,24 @@ export const Nav = () => {
           >
             {navItems.map((item) => {
               return (
-                <ListItem key={item.title} h="100%" py={{ base: 4, lg: 0 }}>
+                <ListItem key={item.title}>
                   <Button
                     as={NextLink}
-                    h="100%"
-                    color={pathName == item.url ? "text.50" : "text.100"}
+                    color={pathName == item.url ? "yellow" : "#e4e4e4"}
                     href={item.url}
                     variant="nav"
                     fontSize={{ base: "lg", lg: "md" }}
                     fontWeight={pathName == item.url ? "bold" : "medium"}
                     _hover={{
-                      color: "text.50",
-                    }}
-                    _active={{
-                      bg: "bg.800",
+                      color: "yellow",
                     }}
                     borderRadius={0}
+                    borderBottom={
+                      pathName == item.url ? " 2px solid yellow" : "none"
+                    }
                     height="100%"
-                    px={5}
+                    px={2}
+                    mx={3}
                   >
                     {item.title}
                   </Button>
@@ -110,13 +74,7 @@ export const Nav = () => {
             })}
           </List>
         </Box>
-        {/* </Container> */}
       </Box>
-      <Collapse animateOpacity in={isOpen}>
-        <Container zIndex={10} flexDir="column" w="100%" variant="main">
-          <Flex alignItems="flex-start" flexDir="column" gap={4} mt={10}></Flex>
-        </Container>
-      </Collapse>
     </Flex>
   );
 };
