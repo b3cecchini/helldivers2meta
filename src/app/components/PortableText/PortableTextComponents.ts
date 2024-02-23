@@ -13,7 +13,6 @@ export const portableTextUIComponents: PortableTextComponents = {
     normal: Normal,
     h2: Heading2,
     h3: Heading3,
-    //h4: Normal
   },
   list: {
     bullet: ListBullet,

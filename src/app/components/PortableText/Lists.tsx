@@ -14,19 +14,19 @@ export const bullet: PortableTextListItemComponent = ({ children }) => (
     alignItems="flex-start"
     display="flex"
     marginBottom={4}
-    textColor="text.200"
+    marginLeft={{ base: 2, lg: 7 }}
     _before={{
       content: "''",
-      width: "6px",
-      height: "6px",
-      backgroundColor: "heat.400",
+      width: "7px",
+      height: "7px",
+      backgroundColor: "yellow",
       display: "block",
       margin: "0.75rem 1rem",
       borderRadius: "50%",
       flexShrink: "0",
     }}
   >
-    <Box>{children}</Box>
+    <Box textAlign={"start"}>{children}</Box>
   </ListItem>
 );
 

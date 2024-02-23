@@ -4,7 +4,19 @@ import { groq } from "next-sanity";
 import { TypedObject } from "sanity";
 import BlogPage from "./blogPage";
 
-const postQuery = groq`*[_type == 'post' && defined(slug.current)][]`;
+const postQuery = groq`*[_type == 'post' && defined(slug.current)][]{
+  ...,
+  _id,
+  title,
+  slug,
+  description,
+  publishedAt,
+  "titleImage": titleImage.asset->{
+    metadata,
+    url
+  },
+
+}`;
 
 export type BlogData = {
   _id: string;
@@ -30,13 +42,5 @@ export type BlogData = {
 export default async function PageBlogs() {
   const blogData: BlogData[] = await sanityClient.fetch(postQuery);
 
-  return (
-    <>
-      <Flex justifyContent={"center"} textAlign={"center"}>
-        <Text> {JSON.stringify(blogData[0], null, 2)}</Text>
-      </Flex>
-
-      <BlogPage blog={blogData[0]} />
-    </>
-  );
+  return <BlogPage blog={blogData[0]} />;
 }

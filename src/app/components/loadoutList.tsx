@@ -31,50 +31,52 @@ export default function LoadoutList({ data }: Props) {
 
   return (
     <>
-      <Heading
-        as={"h1"}
-        textColor={"white"}
-        textShadow={`
+      <Container px={"3rem"} minW={"fit-content"} maxW={"87rem"}>
+        <Heading
+          as={"h1"}
+          textColor={"white"}
+          textShadow={`
           -2px 2px 2px #000,
 				  2px 2px 2px #000,
 				  2px -2px 0 #000,
 				  -2px -2px 0 #000;`}
-      >
-        {" "}
-        Helldivers 2 Meta
-      </Heading>
-      <Flex justifyContent={"center"} mt={8} maxW="83rem">
-        <Flex gap={10} alignItems={"center"}>
-          <Select
-            bgColor={"#e4e4e4"}
-            borderRadius={6}
-            value={selectedOption}
-            onChange={handleSelectChange}
-            placeholder="Filter Mission Type"
-          >
-            {missonTypeList.map((option, index) => {
-              return (
-                <option key={"filter_option_" + index} value={option.value}>
-                  {option.title}
-                </option>
-              );
-            })}
-          </Select>
-          <Select
-            bgColor={"#E2E8F0"}
-            borderRadius={6}
-            value={selectedLevelRange}
-            onChange={handleLevelSelect}
-            placeholder="Filter Level Range"
-          >
-            <option value={1}> 1-4</option>
-            <option value={2}>5-7</option>
-            <option value={3}>8-9</option>
-          </Select>
+        >
+          {" "}
+          Helldivers 2 Meta
+        </Heading>
+        <Flex justifyContent={"end"} my={8}>
+          <Flex gap={6} alignItems={"center"}>
+            <Select
+              bgColor={"rgba(255, 255, 255, .7)"}
+              borderRadius={6}
+              value={selectedOption}
+              onChange={handleSelectChange}
+              placeholder="Filter Mission Type"
+              borderColor={"rgba(0, 0, 0, .4)"}
+            >
+              {missonTypeList.map((option, index) => {
+                return (
+                  <option key={"filter_option_" + index} value={option.value}>
+                    {option.title}
+                  </option>
+                );
+              })}
+            </Select>
+            <Select
+              bgColor={"rgba(255, 255, 255, .7)"}
+              borderRadius={6}
+              value={selectedLevelRange}
+              onChange={handleLevelSelect}
+              placeholder="Filter Level Range"
+              borderColor={"rgba(0, 0, 0, .4)"}
+            >
+              <option value={1}> 1-4</option>
+              <option value={2}>5-7</option>
+              <option value={3}>8-9</option>
+            </Select>
+          </Flex>
         </Flex>
-      </Flex>
 
-      <Container py={"2rem"} px={"3rem"} minW={"fit-content"} maxW={"83rem"}>
         {data.map((loadout, index) => {
           if (
             selectedOption === "" ||

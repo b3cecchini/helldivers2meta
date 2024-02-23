@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Box, ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Container } from "@chakra-ui/react";
 import { theme } from "./theme/theme";
 import { Nav } from "./components/Nav";
 
@@ -22,7 +22,7 @@ export default function RootLayout({
       <body>
         <ChakraProvider theme={theme}>
           <Nav />
-          <Box
+          <Container
             justifyContent={"center"}
             textAlign={"center"}
             py={"6rem"}
@@ -31,11 +31,11 @@ export default function RootLayout({
             backgroundRepeat={"repeat-y"}
             backgroundPosition={"0% 0%"}
             minH={"200vh"}
-            px={"3rem"}
-            minW={"100vw"}
+            px={{ base: ".5rem", lg: "3rem" }}
+            minW={"100%"}
           >
             {children}
-          </Box>
+          </Container>
         </ChakraProvider>
       </body>
     </html>

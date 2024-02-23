@@ -37,7 +37,7 @@ export const Nav = () => {
           ms={{ base: -3, lg: 0 }}
           h={{ base: 12, lg: 12 }}
           pl={10}
-          my={2}
+          my={1}
         >
           <List
             flexDir={{ base: "column", lg: "row" }}

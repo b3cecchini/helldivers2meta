@@ -11,8 +11,6 @@ interface Props {
 export const Image = (props: Props) => {
   if (!props.value.asset) return null;
   const url = urlForImage(props.value.asset);
-
-  console.log("IN Image component", url);
   return (
     <Flex justifyContent="center">
       <ChakraImage

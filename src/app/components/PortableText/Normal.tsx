@@ -3,7 +3,12 @@ import { PortableTextBlockComponent } from "@portabletext/react";
 
 export const Normal: PortableTextBlockComponent = ({ children }) => {
   return (
-    <Text maxW="3xl" mb={8} textColor="#e8e8e8" fontSize={22} lineHeight="180%">
+    <Text
+      mb={8}
+      textColor="#e8e8e8"
+      fontSize={{ base: 14, lg: 20 }}
+      lineHeight="160%"
+    >
       {children}
     </Text>
   );
