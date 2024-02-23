@@ -2,7 +2,7 @@ import { Box, Container, Flex, Text } from "@chakra-ui/react";
 import { sanityClient } from "../../../sanity/lib/client";
 import { groq } from "next-sanity";
 import { TypedObject } from "sanity";
-import BlogPage from "./blogPage";
+import { BlogList } from "./blogList";
 
 const postQuery = groq`*[_type == 'post' && defined(slug.current)][]{
   ...,
@@ -42,5 +42,5 @@ export type BlogData = {
 export default async function PageBlogs() {
   const blogData: BlogData[] = await sanityClient.fetch(postQuery);
 
-  return <BlogPage blog={blogData[0]} />;
+  return <BlogList blogs={blogData} />;
 }

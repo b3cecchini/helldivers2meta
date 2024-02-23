@@ -17,7 +17,7 @@ import dayjs from "dayjs";
 interface Props {
   blog: BlogData;
 }
-export default function BlogPage({ blog }: Props) {
+export default function Blog({ blog }: Props) {
   return (
     <Container
       mt={"1rem"}
@@ -29,7 +29,7 @@ export default function BlogPage({ blog }: Props) {
       maxW={"986px"}
     >
       <Heading as="h1" fontStyle={"italic"} fontWeight={"bold"}>
-        {blog.title}{" "}
+        {blog.title}
       </Heading>
       <Stack
         as="header"

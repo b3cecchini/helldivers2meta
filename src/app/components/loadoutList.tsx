@@ -31,8 +31,9 @@ export default function LoadoutList({ data }: Props) {
 
   return (
     <>
-      <Container px={"3rem"} minW={"fit-content"} maxW={"87rem"}>
+      <Container px={{ base: "none", lg: "3rem" }} maxW={"87rem"}>
         <Heading
+          mt={{ base: 3, md: 0 }}
           as={"h1"}
           textColor={"white"}
           textShadow={`
@@ -44,14 +45,18 @@ export default function LoadoutList({ data }: Props) {
           {" "}
           Helldivers 2 Meta
         </Heading>
-        <Flex justifyContent={"end"} my={8}>
+        <Flex
+          justifyContent={{ base: "center", lg: "end" }}
+          my={{ base: 4, md: 8 }}
+        >
           <Flex gap={6} alignItems={"center"}>
             <Select
+              p={1}
               bgColor={"rgba(255, 255, 255, .7)"}
               borderRadius={6}
               value={selectedOption}
               onChange={handleSelectChange}
-              placeholder="Filter Mission Type"
+              placeholder="Mission Type"
               borderColor={"rgba(0, 0, 0, .4)"}
             >
               {missonTypeList.map((option, index) => {
@@ -67,7 +72,7 @@ export default function LoadoutList({ data }: Props) {
               borderRadius={6}
               value={selectedLevelRange}
               onChange={handleLevelSelect}
-              placeholder="Filter Level Range"
+              placeholder="Level Range"
               borderColor={"rgba(0, 0, 0, .4)"}
             >
               <option value={1}> 1-4</option>
@@ -101,21 +106,27 @@ export default function LoadoutList({ data }: Props) {
                   bgColor={"rgba(0, 31, 63, 0.6)"}
                   backdropFilter={"blur(2px)"}
                 >
-                  <Flex justifyContent={"space-around"} alignItems={"center"}>
+                  <Flex
+                    justifyContent={"space-around"}
+                    alignItems={"center"}
+                    flexDir={{ base: "column", md: "row" }}
+                  >
                     <Flex
-                      bgColor={"black"}
+                      bgColor={"rgba(0, 0, 0, 0.7)"}
                       transform={"skew(-45deg)"}
-                      px={4}
-                      borderX={"10px solid red"}
+                      px={{ base: 4, lg: 4 }}
+                      mx={{ base: 7, lg: 0 }}
+                      mb={{ base: 3, lg: 0 }}
+                      borderX={"10px solid"}
+                      borderColor={"#FF0000"}
                     >
                       <Text
-                        fontSize={26}
+                        fontSize={{ base: 20, md: 26 }}
                         fontWeight={"500"}
                         color={"#F2F2F2"}
                         textTransform={"uppercase"}
                         letterSpacing={"2px"}
-                        textAlign={"start"}
-                        noOfLines={1}
+                        textAlign={{ base: "center", lg: "start" }}
                         transform={"skew(45deg)"}
                       >
                         {loadout?.name}
@@ -128,6 +139,7 @@ export default function LoadoutList({ data }: Props) {
                       bgColor={"rgba(0, 0, 0, .4)"}
                       px={2}
                       borderRadius={5}
+                      mb={{ base: 2, lg: 0 }}
                     >
                       <Text my={0} textColor={"white"}>
                         {" "}
