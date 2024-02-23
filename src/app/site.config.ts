@@ -5,10 +5,6 @@ interface NavItem {
 
 export const navItems: NavItem[] = [
   {
-    title: "Home",
-    url: "/",
-  },
-  {
     title: "News",
     url: "/news",
   },
@@ -24,10 +20,6 @@ export const navItems: NavItem[] = [
     title: "Loadouts",
     url: "/loadouts",
   },
-  // {
-  //   title: 'Raids',
-  //   url: '/raids',
-  // },
 ];
 
 export interface IFooterNavSection {

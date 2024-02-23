@@ -19,7 +19,7 @@ export const bullet: PortableTextListItemComponent = ({ children }) => (
       content: "''",
       width: "7px",
       height: "7px",
-      backgroundColor: "yellow",
+      backgroundColor: "#FFE900",
       display: "block",
       margin: "0.75rem 1rem",
       borderRadius: "50%",

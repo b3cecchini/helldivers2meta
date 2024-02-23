@@ -10,6 +10,8 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
+  Image,
+  Link,
 } from "@chakra-ui/react";
 
 import { usePathname } from "next/navigation";
@@ -39,6 +41,7 @@ export const Nav = () => {
           h={{ base: 12, lg: 12 }}
           pl={10}
           my={1}
+          flexDirection={"row"}
         >
           <List
             flexDir={"row"}
@@ -47,22 +50,32 @@ export const Nav = () => {
             h="100%"
             ms={{ base: 0, lg: -5 }}
           >
+            <Link href={"/"}>
+              <Image
+                alt="Helldivers 2 Home"
+                src={"/images/logo_2.webp"}
+                p={1}
+                w={"115px"}
+              />
+            </Link>
             {navItems.map((item) => {
               return (
                 <ListItem key={item.title}>
                   <Button
                     as={NextLink}
-                    color={pathName.includes(item.url) ? "yellow" : "#e4e4e4"}
+                    color={pathName.includes(item.url) ? "#FFE900" : "#e4e4e4"}
                     href={item.url}
                     variant="nav"
                     fontSize={{ base: "lg", lg: "md" }}
                     fontWeight={pathName.includes(item.url) ? "bold" : "medium"}
                     _hover={{
-                      color: "yellow",
+                      color: "#FFE900",
                     }}
                     borderRadius={0}
                     borderBottom={
-                      pathName.includes(item.url) ? " 2px solid yellow" : "none"
+                      pathName.includes(item.url)
+                        ? " 2px solid #FFE900"
+                        : "none"
                     }
                     height="100%"
                     px={2}
@@ -80,18 +93,27 @@ export const Nav = () => {
       <Flex
         mr={2}
         w={"100%"}
-        justifyContent={"end"}
+        justifyContent={"space-between"}
         display={{ base: "flex", md: "none" }}
       >
+        <Link href={"/"}>
+          <Image
+            alt="Helldivers 2 Home"
+            src={"/images/logo_2.webp"}
+            p={1}
+            w={"115px"}
+          />
+        </Link>
         <Menu>
           {({ isOpen }) => (
             <>
               <MenuButton
+                mt={1}
                 isActive={isOpen}
                 as={Button}
                 p={2}
-                bgColor={"yellow"}
-                _active={{ bgColor: "yellow" }}
+                bgColor={"#FFE900"}
+                _active={{ bgColor: "#FFE900" }}
               >
                 {isOpen ? (
                   <CloseIcon w={3} h={3} />
@@ -106,6 +128,24 @@ export const Nav = () => {
                 bgColor={"rgba(0, 31, 63)"}
                 borderColor={"rgba(0, 31, 63, 0.6)"}
               >
+                <MenuItem bgColor={"rgba(0, 31, 63)"} justifyContent={"center"}>
+                  <Button
+                    as={NextLink}
+                    color={"#e4e4e4"}
+                    href={"/"}
+                    variant="nav"
+                    fontSize={{ base: "lg", lg: "md" }}
+                    fontWeight={"medium"}
+                    _hover={{
+                      color: "#FFE900",
+                    }}
+                    borderRadius={0}
+                    height="100%"
+                    px={2}
+                  >
+                    Home
+                  </Button>
+                </MenuItem>
                 {navItems.map((item) => {
                   return (
                     <MenuItem
@@ -116,7 +156,7 @@ export const Nav = () => {
                       <Button
                         as={NextLink}
                         color={
-                          pathName.includes(item.url) ? "yellow" : "#e4e4e4"
+                          pathName.includes(item.url) ? "#FFE900" : "#e4e4e4"
                         }
                         href={item.url}
                         variant="nav"
@@ -125,11 +165,11 @@ export const Nav = () => {
                           pathName.includes(item.url) ? "bold" : "medium"
                         }
                         _hover={{
-                          color: "yellow",
+                          color: "#FFE900",
                         }}
                         borderRadius={0}
                         borderBottom={
-                          pathName == item.url ? " 2px solid yellow" : "none"
+                          pathName == item.url ? " 2px solid #FFE900" : "none"
                         }
                         height="100%"
                         px={2}

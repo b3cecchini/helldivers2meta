@@ -40,7 +40,7 @@ export const BlogList = ({ blogs }: Props) => {
               boxShadow="0px 0px 12px 0px #000000"
               _hover={{
                 //bgGradient: "linear-gradient(180deg, #313140 0%, #1B1B27 100%)",
-                borderColor: "#FFFF00",
+                borderColor: "#FFE900",
                 boxShadow: "0px 0px 12px 0px #1B1B27",
               }}
             >
