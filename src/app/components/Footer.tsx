@@ -18,6 +18,7 @@ export const Footer = () => {
         w="full"
         py={5}
         textColor={"#e4e4e4"}
+        justifyContent={"center"}
       >
         <Flex alignSelf={"center"} flexDir="column" mb={{ base: 5, lg: 0 }}>
           <Image
