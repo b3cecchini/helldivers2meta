@@ -43,7 +43,7 @@ export default function LoadoutList({ data }: Props) {
 				  -2px -2px 0 #000;`}
         >
           {" "}
-          Helldivers 2 Meta
+          Helldivers 2 Loadouts
         </Heading>
         <Flex
           justifyContent={{ base: "center", lg: "end" }}
