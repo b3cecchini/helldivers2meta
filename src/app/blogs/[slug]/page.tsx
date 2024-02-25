@@ -23,7 +23,6 @@ export default async function BlogPageBase({
 }: {
   params: { slug: string };
 }) {
-  console.log("==> slug: " + params.slug);
   const blogData: BlogData = await sanityClient.fetch(getPostQuery, {
     slug: params.slug,
   });
