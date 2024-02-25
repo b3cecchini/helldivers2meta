@@ -4,10 +4,13 @@ import "./globals.css";
 import { ChakraProvider, Container } from "@chakra-ui/react";
 import { theme } from "./theme/theme";
 import { Nav } from "./components/Nav";
+import { Footer } from "./components/Footer";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  icons: "images/hd2-logo.webp",
   title: "Helldivers 2 Meta",
   description:
     "Community app to share information and latest Loadouts to spread maximum democracy",
