@@ -9,7 +9,6 @@ import {
   Tooltip,
   Image,
 } from "@chakra-ui/react";
-import loadout from "../../sanity/schemas/loadout";
 import { LoadoutData } from "./loadouts/page";
 import { sanityClient } from "../../sanity/lib/client";
 import { groq } from "next-sanity";
@@ -101,10 +100,8 @@ export default async function Home() {
       </Container>
 
       <Heading
-        as={NextLink}
         mt={7}
         mb={4}
-        href={"/loadouts"}
         textColor={"white"}
         textShadow={`
           -2px 2px 2px #000,
@@ -113,7 +110,13 @@ export default async function Home() {
 				  -2px -2px 0 #000;`}
       >
         {" "}
-        <Link>View Loadouts Here!</Link>
+        <Text
+          as={NextLink}
+          href={"/loadouts"}
+          _hover={{ textDecoration: "underline" }}
+        >
+          View Loadouts Here!{" "}
+        </Text>
       </Heading>
 
       <Container
@@ -393,10 +396,8 @@ export default async function Home() {
       </Container>
 
       <Heading
-        as={NextLink}
         mt={7}
         mb={2}
-        href={"/blogs"}
         textColor={"white"}
         textShadow={`
           -2px 2px 2px #000,
@@ -405,7 +406,13 @@ export default async function Home() {
 				  -2px -2px 0 #000;`}
       >
         {" "}
-        <Link>Check out our Articles!</Link>
+        <Text
+          as={NextLink}
+          href={"/blogs"}
+          _hover={{ textDecoration: "underline" }}
+        >
+          Check out our Articles!
+        </Text>
       </Heading>
 
       <Container
@@ -421,6 +428,7 @@ export default async function Home() {
             {" "}
             {articleText}{" "}
             <Link
+              as={NextLink}
               textDecor={"underline"}
               _hover={{ textColor: "#FFE900" }}
               href={"/blogs"}
