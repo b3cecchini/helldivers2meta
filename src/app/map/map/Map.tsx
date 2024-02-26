@@ -27,40 +27,42 @@ type PlanetData = {
 type MarkerProps = {
   planet: PlanetData;
   key: string;
+  enemyType?: string;
   children: any;
 };
 
-function LocationMarker({ planet, key, children }: MarkerProps) {
+function LocationMarker({ planet, key, enemyType, children }: MarkerProps) {
   const [iconSize, setIconSize] = useState<[number, number]>([5, 5]);
   const map = useMapEvents({
     zoomend() {
       switch (map.getZoom()) {
         case 5:
-          console.log("found 5");
           setIconSize([50, 50]);
           return;
         case 4:
-          console.log("found 4");
           setIconSize([30, 30]);
           return;
         case 3:
-          console.log("found 3");
           setIconSize([18, 18]);
           return;
         case 2:
-          console.log("found 2");
           setIconSize([8, 8]);
           return;
         default:
-          console.log("default");
           setIconSize([5, 5]);
           return;
       }
     },
-    click(e) {
-      console.log([e.latlng.lat, e.latlng.lng]);
-    },
   });
+
+  const imageurl =
+    planet.planetLiberatedPercent === 0
+      ? enemyType === "Terminids"
+        ? "/images/planet/planet_terminid_control.png"
+        : enemyType === "Automatons"
+        ? "/images/planet/planet_automaton_control.png"
+        : "/images/planet/planet_icon.png"
+      : "/images/planet/planet_icon.png";
 
   return (
     <Marker
@@ -68,7 +70,7 @@ function LocationMarker({ planet, key, children }: MarkerProps) {
       position={[planet.coordinates[0], planet.coordinates[1]]}
       icon={
         new Leaflet.Icon({
-          iconUrl: "/images/circle.png",
+          iconUrl: imageurl,
           iconSize: iconSize,
         })
       }
@@ -130,6 +132,7 @@ export default function Map() {
                     <LocationMarker
                       key={"sector_" + sectorIndex + "_planet_" + planetIndex}
                       planet={planet}
+                      enemyType={sector.enemyType}
                     >
                       {planet.defenseCampaign == true && <LuSwords />}
                       <Tooltip
@@ -139,20 +142,13 @@ export default function Map() {
                         className="custom-leaflet-tooltip"
                       >
                         <VStack
-                          align="start"
-                          p={2}
-                          spacing={4}
+                          //align="start"
+                          p={5}
                           w={"100%"}
-                          bgColor={"rgba(0, 31, 63, 0.6)"}
+                          bgColor={"rgba(0, 31, 63, 0.8)"}
+                          textColor={"white"}
                         >
-                          <Heading
-                            as={"h2"}
-                            pr={8}
-                            color={"coal.50"}
-                            fontFamily="serif"
-                            fontSize="md"
-                            mb={5}
-                          >
+                          <Heading as={"h2"} fontSize={18} mb={3}>
                             {planet.name}
                           </Heading>
                           <Text>

@@ -42,6 +42,7 @@ export const Nav = () => {
           pl={10}
           my={1}
           flexDirection={"row"}
+          alignItems={"center"}
         >
           <List
             flexDir={"row"}
@@ -53,9 +54,9 @@ export const Nav = () => {
             <Link href={"/"}>
               <Image
                 alt="Helldivers 2 Home"
-                src={"/images/logo_2.webp"}
-                p={1}
-                w={"115px"}
+                src={"/images/hd_arsenal_logo.png"}
+                py={3}
+                w={"120px"}
               />
             </Link>
             {navItems.map((item) => {
@@ -99,9 +100,10 @@ export const Nav = () => {
         <Link href={"/"}>
           <Image
             alt="Helldivers 2 Home"
-            src={"/images/logo_2.webp"}
-            p={1}
-            w={"115px"}
+            src={"/images/hd_arsenal_logo.png"}
+            py={3}
+            pl={3}
+            w={"150px"}
           />
         </Link>
         <Menu>

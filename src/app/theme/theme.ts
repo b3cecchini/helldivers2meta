@@ -10,29 +10,14 @@ export const theme = extendTheme({
       },
       ".leaflet-container": {
         height: "100vh",
+        backgroundImage: "/images/splash/map_bg.jpg",
+        backgroundSize: "contain",
       },
       ".custom-leaflet-tooltip": {
-        backgroundColor: "gba(0, 31, 63, 0.6)",
-        textColor: "blueviolet",
+        backgroundColor: "gray",
+        textColor: "#black",
+        justifyContent: "center",
       },
-      /**
-       * 
-       .leaflet-tooltip-own {
-          position: absolute;
-          padding: 4px;
-          background-color: rgba(0, 0, 0, 0.4);
-          border: 0px solid #000;
-          color: #000;
-          white-space: nowrap;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          user-select: none;
-          pointer-events: none;
-          box-shadow: 0 1px 3px rgba(0,0,0,0.4);
-}
-          
-       */
     },
   },
 });
