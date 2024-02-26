@@ -69,33 +69,38 @@ const geoJSON = {
   ],
 };
 
-function LocationMarker() {
+type MarkerProps = {
+  position: number[];
+  key: string;
+};
+
+function LocationMarker({ position, key }: MarkerProps) {
   const [iconSize, setIconSize] = useState<[number, number]>([15, 15]);
   const map = useMapEvents({
-    // zoomend() {
-    //   switch (map.getZoom()) {
-    //     case 5:
-    //       console.log("found 5");
-    //       setIconSize([50, 50]);
-    //       return;
-    //     case 4:
-    //       console.log("found 4");
-    //       setIconSize([40, 40]);
-    //       return;
-    //     case 3:
-    //       console.log("found 3");
-    //       setIconSize([30, 30]);
-    //       return;
-    //     case 2:
-    //       console.log("found 2");
-    //       setIconSize([20, 20]);
-    //       return;
-    //     default:
-    //       console.log("default");
-    //       setIconSize([15, 15]);
-    //       return;
-    //   }
-    // },
+    zoomend() {
+      switch (map.getZoom()) {
+        case 5:
+          console.log("found 5");
+          setIconSize([50, 50]);
+          return;
+        case 4:
+          console.log("found 4");
+          setIconSize([40, 40]);
+          return;
+        case 3:
+          console.log("found 3");
+          setIconSize([30, 30]);
+          return;
+        case 2:
+          console.log("found 2");
+          setIconSize([20, 20]);
+          return;
+        default:
+          console.log("default");
+          setIconSize([15, 15]);
+          return;
+      }
+    },
     click(e) {
       console.log([e.latlng.lat, e.latlng.lng]);
     },
@@ -103,14 +108,14 @@ function LocationMarker() {
 
   return (
     <Marker
-      position={[0, 0]}
+      position={[position[0], position[1]]}
       icon={
         new Leaflet.Icon({
           iconUrl: "/images/circle.png",
           iconSize: iconSize,
         })
       }
-    ></Marker>
+    />
   );
 }
 
@@ -132,6 +137,7 @@ export default function Map() {
         doubleClickZoom={false}
         style={{ backgroundColor: "black", cursor: "crosshair" }}
         attributionControl={false}
+
         //zoomControl={() => {getIconSize()}}
       >
         <TileLayer
@@ -141,24 +147,33 @@ export default function Map() {
           zIndex={1}
         />
 
-        {sectorData.map((sector, index) => {
+        {sectorData.map((sector, sectorIndex) => {
           return (
-            <Polygon
-              key={"polygon_shape_" + index}
-              pathOptions={{
-                color:
-                  sector.enemyType === "None"
-                    ? "skyblue"
-                    : sector.enemyType === "Terminids"
-                    ? "yellow"
-                    : "red",
-              }}
-              positions={sector.positions as unknown as LatLng[]}
-            />
+            <>
+              <Polygon
+                key={"polygon_shape_" + sectorIndex}
+                pathOptions={{
+                  color:
+                    sector.enemyType === "None"
+                      ? "skyblue"
+                      : sector.enemyType === "Terminids"
+                      ? "yellow"
+                      : "red",
+                }}
+                positions={sector.positions as unknown as LatLng[]}
+              />
+              {sector.planets.map((planet, planetIndex) => {
+                if (planet.name === "Super Earth")
+                  return (
+                    <LocationMarker
+                      key={"sector_" + sectorIndex + "_planet_" + planetIndex}
+                      position={[planet.coordinates[0], planet.coordinates[1]]}
+                    />
+                  );
+              })}
+            </>
           );
         })}
-
-        <LocationMarker />
       </MapContainer>
     </>
   );
