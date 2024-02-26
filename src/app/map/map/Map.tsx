@@ -106,7 +106,7 @@ function LocationMarker() {
       position={[0, 0]}
       icon={
         new Leaflet.Icon({
-          iconUrl: "/images/hd2-logo.webp",
+          iconUrl: "/images/circle.png",
           iconSize: iconSize,
         })
       }
@@ -130,7 +130,7 @@ export default function Map() {
         minZoom={2}
         scrollWheelZoom={true}
         doubleClickZoom={false}
-        style={{ backgroundColor: "black" }}
+        style={{ backgroundColor: "black", cursor: "crosshair" }}
         attributionControl={false}
         //zoomControl={() => {getIconSize()}}
       >
