@@ -62,6 +62,10 @@ function LocationMarker({ planet, key, enemyType, children }: MarkerProps) {
         : enemyType === "Automatons"
         ? "/images/planet/planet_automaton_control.png"
         : "/images/planet/planet_icon.png"
+      : planet.planetLiberatedPercent < 100
+      ? enemyType === "Automatons"
+        ? "/images/planet/planet_automaton_liberation_progress.png"
+        : "/images/planet/planet_terminid_liberation_progress.png"
       : "/images/planet/planet_icon.png";
 
   return (
