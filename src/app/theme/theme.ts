@@ -11,12 +11,19 @@ export const theme = extendTheme({
       ".leaflet-container": {
         height: "100vh",
         backgroundImage: "/images/splash/map_bg.jpg",
-        backgroundSize: "contain",
+        backgroundSize: "cover",
       },
       ".custom-leaflet-tooltip": {
-        backgroundColor: "gray",
+        backgroundColor: "rgba(0, 31, 63)",
         textColor: "#black",
         justifyContent: "center",
+      },
+      ".leaflet-popup-content": {
+        mx: "1rem",
+        margin: 0,
+      },
+      ".leaflet-popup-content p": {
+        my: "0px !important",
       },
     },
   },

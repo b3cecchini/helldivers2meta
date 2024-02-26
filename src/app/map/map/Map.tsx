@@ -87,19 +87,6 @@ function LocationMarker({ planet, key, enemyType, children }: MarkerProps) {
 export default function Map() {
   return (
     <>
-      <Heading
-        as={"h1"}
-        mt={7}
-        mb={4}
-        textColor={"white"}
-        textShadow={`
-          -2px 2px 2px #000,
-				  2px 2px 2px #000,
-				  2px -2px 0 #000,
-				  -2px -2px 0 #000;`}
-      >
-        Galactic War Progress
-      </Heading>
       <MapContainer
         center={[0, 0]}
         zoom={1}
@@ -129,7 +116,46 @@ export default function Map() {
           return (
             <>
               <FeatureGroup>
-                <Popup> {sector.name}</Popup>
+                <Popup>
+                  {" "}
+                  <VStack p={3} w={"100%"}>
+                    {sector.enemyType === "Terminids" && (
+                      <Text
+                        fontSize={22}
+                        p={3}
+                        bgColor={"darkgray"}
+                        textColor={"#FFE900"}
+                      >
+                        {" "}
+                        Terminid Control{" "}
+                      </Text>
+                    )}
+                    {sector.enemyType === "Automatons" && (
+                      <Text
+                        p={3}
+                        fontSize={22}
+                        bgColor={"darkgray"}
+                        textColor={"red"}
+                      >
+                        {" "}
+                        Automaton Control{" "}
+                      </Text>
+                    )}
+                    <Heading
+                      textAlign={"center"}
+                      as={"h1"}
+                      textColor={"black"}
+                      px={2}
+                    >
+                      {sector.name}
+                    </Heading>
+
+                    <Text fontSize={20}>
+                      {" "}
+                      {`${sector.liberatedPercent}% Liberated`}
+                    </Text>
+                  </VStack>
+                </Popup>
                 <Polygon
                   key={"polygon_shape_" + sectorIndex}
                   pathOptions={{
@@ -144,37 +170,36 @@ export default function Map() {
                 />
               </FeatureGroup>
               {sector.planets.map((planet, planetIndex) => {
-                if (planet.coordinates[0] != 0)
-                  return (
-                    <LocationMarker
-                      key={"sector_" + sectorIndex + "_planet_" + planetIndex}
-                      planet={planet}
-                      enemyType={sector.enemyType}
+                return (
+                  <LocationMarker
+                    key={"sector_" + sectorIndex + "_planet_" + planetIndex}
+                    planet={planet}
+                    enemyType={sector.enemyType}
+                  >
+                    <Tooltip
+                      opacity={1}
+                      direction="top"
+                      offset={[0, -10]}
+                      className="custom-leaflet-tooltip"
                     >
-                      {planet.defenseCampaign == true && <LuSwords />}
-                      <Tooltip
-                        opacity={1}
-                        direction="top"
-                        offset={[0, -10]}
-                        className="custom-leaflet-tooltip"
+                      <VStack
+                        p={5}
+                        w={"100%"}
+                        bgColor={"rgba(0, 31, 63, 0.8)"}
+                        my={"1rem"}
+                        backdropFilter={"brightness(50%)"}
+                        textColor={"white"}
                       >
-                        <VStack
-                          //align="start"
-                          p={5}
-                          w={"100%"}
-                          bgColor={"rgba(0, 31, 63, 0.8)"}
-                          textColor={"white"}
-                        >
-                          <Heading as={"h2"} fontSize={18} mb={3}>
-                            {planet.name}
-                          </Heading>
-                          <Text>
-                            {`${planet.planetLiberatedPercent}% Liberated`}
-                          </Text>
-                        </VStack>
-                      </Tooltip>
-                    </LocationMarker>
-                  );
+                        <Heading as={"h2"} fontSize={22} mb={3}>
+                          {planet.name}
+                        </Heading>
+                        <Text fontSize={16}>
+                          {`${planet.planetLiberatedPercent}% Liberated`}
+                        </Text>
+                      </VStack>
+                    </Tooltip>
+                  </LocationMarker>
+                );
               })}
             </>
           );

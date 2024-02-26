@@ -30,7 +30,6 @@ export const Nav = () => {
       zIndex={4}
       w={"100%"}
       bgColor={"rgba(0, 31, 63, 0.6)"}
-      //backdropFilter={"contrast(30%)"}
     >
       <Box display={{ base: "none", md: "flex" }} w="100%">
         <Box
@@ -67,7 +66,7 @@ export const Nav = () => {
                     color={pathName.includes(item.url) ? "#FFE900" : "#e4e4e4"}
                     href={item.url}
                     variant="nav"
-                    fontSize={{ base: "lg", lg: "md" }}
+                    fontSize="lg"
                     fontWeight={pathName.includes(item.url) ? "bold" : "medium"}
                     _hover={{
                       color: "#FFE900",
