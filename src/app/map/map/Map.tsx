@@ -70,7 +70,6 @@ function LocationMarker({ planet, key, children }: MarkerProps) {
         new Leaflet.Icon({
           iconUrl: "/images/circle.png",
           iconSize: iconSize,
-          html: LuSwords,
         })
       }
     >
