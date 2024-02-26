@@ -13,6 +13,10 @@ export const navItems: NavItem[] = [
     url: "/about",
   },
   {
+    title: "War Map",
+    url: "/map",
+  },
+  {
     title: "Blogs",
     url: "/blogs",
   },
