@@ -83,6 +83,19 @@ function LocationMarker({ planet, key, enemyType, children }: MarkerProps) {
 export default function Map() {
   return (
     <>
+      <Heading
+        as={"h1"}
+        mt={7}
+        mb={4}
+        textColor={"white"}
+        textShadow={`
+          -2px 2px 2px #000,
+				  2px 2px 2px #000,
+				  2px -2px 0 #000,
+				  -2px -2px 0 #000;`}
+      >
+        Galactic War Progress
+      </Heading>
       <MapContainer
         center={[0, 0]}
         zoom={1}

@@ -109,11 +109,36 @@ export default async function Home() {
 				  2px -2px 0 #000,
 				  -2px -2px 0 #000;`}
       >
+        <Text
+          as={NextLink}
+          href={"/map"}
+          _hover={{
+            color: "#FFE900",
+            textDecoration: "none",
+          }}
+        >
+          Click Here To View The Galactic War Progress!
+        </Text>
+      </Heading>
+
+      <Heading
+        mt={7}
+        mb={4}
+        textColor={"white"}
+        textShadow={`
+          -2px 2px 2px #000,
+				  2px 2px 2px #000,
+				  2px -2px 0 #000,
+				  -2px -2px 0 #000;`}
+      >
         {" "}
         <Text
           as={NextLink}
           href={"/loadouts"}
-          _hover={{ textDecoration: "underline" }}
+          _hover={{
+            color: "#FFE900",
+            textDecoration: "none",
+          }}
         >
           View Loadouts Here!{" "}
         </Text>
@@ -409,9 +434,12 @@ export default async function Home() {
         <Text
           as={NextLink}
           href={"/blogs"}
-          _hover={{ textDecoration: "underline" }}
+          _hover={{
+            color: "#FFE900",
+            textDecoration: "none",
+          }}
         >
-          Check out our Articles!
+          Check Out Our Articles!
         </Text>
       </Heading>
 
