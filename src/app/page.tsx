@@ -42,7 +42,7 @@ const disclaimerText = `This is a fan-made site. We are in no way affiliated, as
 
 const disclaimerLink = `https://www.arrowheadgamestudios.com/`;
 
-const summaryText = `As massive fans of Helldivers 2, we built this site as a community resource for players to find loadouts in their quest to spread democracy! 
+const summaryText = `As massive fans of Helldivers 2, we built this site as a community resource for players view the war effort and find loadouts in their quest to spread democracy! 
     While we encourage running what you find to be the most fun, we are providing these loadout recommendations to players looking to maximize their combat effectiveness in specific scenarios. Think of our loadouts as high-level “Brasch Tactics!” 
     We hope to expand the site over time providing new features and functionality to Helldivers 2 fans as the game continues to grow including ongoing guides, the ability to upload loadouts, share them with your friends, and post them for others to see. 
     For now, check out the starter and high-level gear in the "Loadouts" tab while we continue to liberate the surrounding systems of Super Earth! `;
@@ -117,7 +117,7 @@ export default async function Home() {
             textDecoration: "none",
           }}
         >
-          Click Here To View The Galactic War Progress!
+          View The Galactic War Progress Here!
         </Text>
       </Heading>
 
