@@ -8,6 +8,9 @@ export const theme = extendTheme({
         backgroundColor: "#001f3f",
         textColor: "#000000",
       },
+      ".leaflet-container": {
+        height: "100vh",
+      },
     },
   },
 });
