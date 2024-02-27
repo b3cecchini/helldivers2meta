@@ -10,9 +10,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   icons: "images/hd2-logo.webp",
-  title: "Helldivers 2 Meta",
+  title: "HD Arsenal",
   description:
-    "Community app to share information and latest Loadouts to spread maximum democracy",
+    "A community app featuring an updated War Map and the latest Loadouts to spread maximum Democracy!",
 };
 
 export default function RootLayout({

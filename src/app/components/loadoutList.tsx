@@ -167,7 +167,11 @@ export default function LoadoutList({ data }: Props) {
                         {" "}
                         Enemy Type:{" "}
                       </Text>
-                      <Text textColor={"#F5C400"} my={0}>
+                      <Text
+                        textColor={"#F5C400"}
+                        my={0}
+                        textTransform={"capitalize"}
+                      >
                         {" "}
                         {loadout.enemyType}
                       </Text>
@@ -322,8 +326,7 @@ export default function LoadoutList({ data }: Props) {
                                 >
                                   <Image
                                     alt={playerLoadout.booster?.name}
-                                    src={`/images/strategems/${playerLoadout
-                                      .strategems[0].slug.current!}.png`}
+                                    src={`/images/booster/booster.png`}
                                     borderColor={"#F5C400"}
                                     clipPath={
                                       "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"

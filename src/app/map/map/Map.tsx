@@ -90,10 +90,6 @@ export default function Map() {
       <MapContainer
         center={[0, 0]}
         zoom={1}
-        // maxBounds={[
-        //   [-300, -300],
-        //   [300, 300],
-        // ]}
         maxBoundsViscosity={1}
         worldCopyJump={false}
         maxZoom={5}
@@ -102,8 +98,6 @@ export default function Map() {
         doubleClickZoom={false}
         style={{ backgroundColor: "black", cursor: "crosshair" }}
         attributionControl={false}
-
-        //zoomControl={() => {getIconSize()}}
       >
         {/* <TileLayer
           url="/images/map/{z}_{x}_{y}.jpg"
@@ -123,6 +117,7 @@ export default function Map() {
                       <Text
                         fontSize={22}
                         p={3}
+                        borderRadius={7}
                         bgColor={"darkgray"}
                         textColor={"#FFE900"}
                       >
@@ -134,6 +129,7 @@ export default function Map() {
                       <Text
                         p={3}
                         fontSize={22}
+                        borderRadius={7}
                         bgColor={"darkgray"}
                         textColor={"red"}
                       >
