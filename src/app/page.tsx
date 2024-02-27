@@ -140,7 +140,7 @@ export default async function Home() {
             textDecoration: "none",
           }}
         >
-          View Loadouts Here!{" "}
+          View More Loadouts Here!{" "}
         </Text>
       </Heading>
 
