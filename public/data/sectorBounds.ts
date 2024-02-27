@@ -3141,12 +3141,12 @@ export const sectorData = [
       [26.55803787581629, -51.705648148577296],
     ],
 
-    liberatedPercent: 60.00568,
+    liberatedPercent: 60.00242,
     enemyType: "Automatons",
     planets: [
       {
         name: "Vandalon IV",
-        planetLiberatedPercent: 0.1793,
+        planetLiberatedPercent: 0.136,
         coordinates: [1.8162193916721414, -73.60860161689772],
         defenseCampaign: false,
         liberationCampaign: true,
@@ -3300,7 +3300,7 @@ export const sectorData = [
       [-2.359869939372891, -68.57834539694404],
     ],
 
-    liberatedPercent: 0.6624,
+    liberatedPercent: 1.001,
     enemyType: "Automatons",
     planets: [
       {
@@ -3312,7 +3312,7 @@ export const sectorData = [
       },
       {
         name: "Ubanea",
-        planetLiberatedPercent: 0.1781,
+        planetLiberatedPercent: 0.018,
         coordinates: [-21.489285291354644, -69.48692268958587],
         defenseCampaign: false,
         liberationCampaign: true,
@@ -3326,7 +3326,7 @@ export const sectorData = [
       },
       {
         name: "Malevelon Creek",
-        planetLiberatedPercent: 3.1246,
+        planetLiberatedPercent: 5.0351,
         coordinates: [-11.039915830014452, -72.64612495257451],
         defenseCampaign: false,
         liberationCampaign: true,
@@ -3369,12 +3369,12 @@ export const sectorData = [
       [7.465843311651555, -49.90669393684065],
       [10.764322002959819, -49.203761175989705],
     ],
-    liberatedPercent: 59.6391,
+    liberatedPercent: 64.705,
     enemyType: "Automatons",
     planets: [
       {
         name: "Pöpli IX",
-        planetLiberatedPercent: 57.5502,
+        planetLiberatedPercent: 59.2773,
         coordinates: [1.640036642991903, -55.53377936138606],
         defenseCampaign: false,
         liberationCampaign: true,
@@ -3395,14 +3395,14 @@ export const sectorData = [
       },
       {
         name: "Mantes",
-        planetLiberatedPercent: 70.0589,
+        planetLiberatedPercent: 73.8922,
         coordinates: [-6.435269541877693, -63.519540637273984],
         defenseCampaign: false,
         liberationCampaign: true,
       },
       {
         name: "Draupnir",
-        planetLiberatedPercent: 10.0,
+        planetLiberatedPercent: 20.0,
         coordinates: [-14.55468697686062, -63.344029400441286],
         defenseCampaign: true,
         liberationCampaign: true,
@@ -3840,12 +3840,12 @@ export const sectorData = [
       [41.89275250919976, 48.7727192788742],
     ],
 
-    liberatedPercent: 0.04747,
+    liberatedPercent: 0.005,
     enemyType: "Terminids",
     planets: [
       {
         name: "Hellmire",
-        planetLiberatedPercent: 0.1906,
+        planetLiberatedPercent: 0.2,
         coordinates: [27.8292172070015, 44.83164411210071],
         defenseCampaign: false,
         liberationCampaign: true,
@@ -3891,19 +3891,19 @@ export const sectorData = [
       [22.62662878784, 44.42330734337218],
     ],
 
-    liberatedPercent: 0.12837,
+    liberatedPercent: 0.01523,
     enemyType: "Terminids",
     planets: [
       {
         name: "Estanu",
-        planetLiberatedPercent: 0.1914,
+        planetLiberatedPercent: 0.0236,
         coordinates: [21.194401823026706, 49.57044750658364],
         defenseCampaign: false,
         liberationCampaign: true,
       },
       {
         name: "Crimsica",
-        planetLiberatedPercent: 0.1955,
+        planetLiberatedPercent: 0.0242,
         coordinates: [16.199243821548425, 52.290871677490514],
         defenseCampaign: false,
         liberationCampaign: true,
@@ -3944,7 +3944,7 @@ export const sectorData = [
       [26.50172840955768, 30.05706792004734],
     ],
 
-    liberatedPercent: 81.21272,
+    liberatedPercent: 84.0258,
     enemyType: "Terminids",
     planets: [
       {
@@ -3970,7 +3970,7 @@ export const sectorData = [
       },
       {
         name: "Erata Prime",
-        planetLiberatedPercent: 24.8518,
+        planetLiberatedPercent: 36.1041,
         coordinates: [25.63060645569419, 37.02139407304544],
         defenseCampaign: false,
         liberationCampaign: true,
