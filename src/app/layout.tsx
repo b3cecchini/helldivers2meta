@@ -5,8 +5,11 @@ import { ChakraProvider, Container } from "@chakra-ui/react";
 import { theme } from "./theme/theme";
 import { Nav } from "./components/Nav";
 import { Footer } from "./components/Footer";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const isLocal = process.env.NEXT_PUBLIC_ENV === "local";
 
 export const metadata: Metadata = {
   icons: "images/hd2-logo.webp",
@@ -44,6 +47,7 @@ export default function RootLayout({
           <Footer />
         </ChakraProvider>
       </body>
+      {!isLocal && <GoogleAnalytics gaId="G-18BTTGM5P5" />}
     </html>
   );
 }
