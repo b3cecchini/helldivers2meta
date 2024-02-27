@@ -1,4 +1,4 @@
-import { Flex, Heading } from "@chakra-ui/react";
+import { Flex, Heading, Text } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 
 const MapComponent = dynamic(() => import("./map/Map"), { ssr: false });
@@ -7,7 +7,7 @@ export default async function PageMap() {
   return (
     <>
       <Heading
-        mb={4}
+        mb={2}
         textColor={"white"}
         textShadow={`
           -2px 2px 2px #000,
@@ -40,9 +40,32 @@ export default async function PageMap() {
         >
           Terminids
         </Heading>
-        \
+      </Flex>
+      <Flex justifyContent={"center"}>
+        <Text
+          color={"white"}
+          textShadow={`
+          -2px 2px 2px #000,
+				  2px 2px 2px #000,
+				  2px -2px 0 #000,
+				  -2px -2px 0 #000;`}
+          mb={1}
+        >
+          This map is updated every 12 hours
+        </Text>
       </Flex>
       <MapComponent />;
+      <Text
+        color={"white"}
+        textShadow={`
+          -2px 2px 2px #000,
+				  2px 2px 2px #000,
+				  2px -2px 0 #000,
+				  -2px -2px 0 #000;`}
+        mb={1}
+      >
+        Last updated February 26, 2024 9:00PM EST
+      </Text>
     </>
   );
 }
