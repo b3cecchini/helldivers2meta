@@ -55,6 +55,17 @@ export default async function PageMap() {
         </Text>
       </Flex>
       <MapComponent />;
+      <Text
+        color={"white"}
+        textShadow={`
+          -2px 2px 2px #000,
+				  2px 2px 2px #000,
+				  2px -2px 0 #000,
+				  -2px -2px 0 #000;`}
+        mb={1}
+      >
+        Last updated February 26, 2024 9:00PM EST
+      </Text>
     </>
   );
 }

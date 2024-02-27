@@ -57,9 +57,9 @@ export const Footer = () => {
             </List>
           </Flex>
         </Flex>
-        {/* <Flex justifyContent={"center"} fontWeight={"medium"}>
-          Contact: helldiversmeta@gmail.com
-        </Flex> */}
+        <Flex justifyContent={"center"} fontWeight={"medium"}>
+          Contact: contact.hdarsenal@gmail.com
+        </Flex>
       </Flex>
     </Flex>
   );

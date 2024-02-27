@@ -3146,7 +3146,7 @@ export const sectorData = [
     planets: [
       {
         name: "Vandalon IV",
-        planetLiberatedPercent: 0.0178,
+        planetLiberatedPercent: 0.1793,
         coordinates: [1.8162193916721414, -73.60860161689772],
         defenseCampaign: false,
         liberationCampaign: true,
@@ -3300,7 +3300,7 @@ export const sectorData = [
       [-2.359869939372891, -68.57834539694404],
     ],
 
-    liberatedPercent: 0.44482,
+    liberatedPercent: 0.6624,
     enemyType: "Automatons",
     planets: [
       {
@@ -3312,7 +3312,7 @@ export const sectorData = [
       },
       {
         name: "Ubanea",
-        planetLiberatedPercent: 0.0227,
+        planetLiberatedPercent: 0.1781,
         coordinates: [-21.489285291354644, -69.48692268958587],
         defenseCampaign: false,
         liberationCampaign: true,
@@ -3326,7 +3326,7 @@ export const sectorData = [
       },
       {
         name: "Malevelon Creek",
-        planetLiberatedPercent: 2.1883,
+        planetLiberatedPercent: 3.1246,
         coordinates: [-11.039915830014452, -72.64612495257451],
         defenseCampaign: false,
         liberationCampaign: true,
@@ -3369,12 +3369,12 @@ export const sectorData = [
       [7.465843311651555, -49.90669393684065],
       [10.764322002959819, -49.203761175989705],
     ],
-    liberatedPercent: 55.60234,
+    liberatedPercent: 59.6391,
     enemyType: "Automatons",
     planets: [
       {
         name: "Pöpli IX",
-        planetLiberatedPercent: 56.46,
+        planetLiberatedPercent: 57.5502,
         coordinates: [1.640036642991903, -55.53377936138606],
         defenseCampaign: false,
         liberationCampaign: true,
@@ -3395,14 +3395,14 @@ export const sectorData = [
       },
       {
         name: "Mantes",
-        planetLiberatedPercent: 67.3565,
+        planetLiberatedPercent: 70.0589,
         coordinates: [-6.435269541877693, -63.519540637273984],
         defenseCampaign: false,
         liberationCampaign: true,
       },
       {
         name: "Draupnir",
-        planetLiberatedPercent: 50.0,
+        planetLiberatedPercent: 10.0,
         coordinates: [-14.55468697686062, -63.344029400441286],
         defenseCampaign: true,
         liberationCampaign: true,
@@ -3840,12 +3840,12 @@ export const sectorData = [
       [41.89275250919976, 48.7727192788742],
     ],
 
-    liberatedPercent: 0.00925,
+    liberatedPercent: 0.04747,
     enemyType: "Terminids",
     planets: [
       {
         name: "Hellmire",
-        planetLiberatedPercent: 0.00895,
+        planetLiberatedPercent: 0.1906,
         coordinates: [27.8292172070015, 44.83164411210071],
         defenseCampaign: false,
         liberationCampaign: true,
@@ -3891,19 +3891,19 @@ export const sectorData = [
       [22.62662878784, 44.42330734337218],
     ],
 
-    liberatedPercent: 0.02053,
+    liberatedPercent: 0.12837,
     enemyType: "Terminids",
     planets: [
       {
         name: "Estanu",
-        planetLiberatedPercent: 0.0315,
+        planetLiberatedPercent: 0.1914,
         coordinates: [21.194401823026706, 49.57044750658364],
         defenseCampaign: false,
         liberationCampaign: true,
       },
       {
         name: "Crimsica",
-        planetLiberatedPercent: 0.0331,
+        planetLiberatedPercent: 0.1955,
         coordinates: [16.199243821548425, 52.290871677490514],
         defenseCampaign: false,
         liberationCampaign: true,
@@ -3944,7 +3944,7 @@ export const sectorData = [
       [26.50172840955768, 30.05706792004734],
     ],
 
-    liberatedPercent: 93.61143,
+    liberatedPercent: 81.21272,
     enemyType: "Terminids",
     planets: [
       {
@@ -3970,7 +3970,7 @@ export const sectorData = [
       },
       {
         name: "Erata Prime",
-        planetLiberatedPercent: 15.5307,
+        planetLiberatedPercent: 24.8518,
         coordinates: [25.63060645569419, 37.02139407304544],
         defenseCampaign: false,
         liberationCampaign: true,
