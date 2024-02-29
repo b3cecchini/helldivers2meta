@@ -1655,12 +1655,12 @@ export const sectorData = [
       [-2.284550660236957, 33.698865760510465],
       [-2.3284603685731593, 42.440866180099945],
     ],
-    liberatedPercent: 100.0,
-    enemyType: "None",
+    liberatedPercent: 95.27017,
+    enemyType: "Terminids",
     planets: [
       {
         name: "Veld",
-        planetLiberatedPercent: 100.0,
+        planetLiberatedPercent: 66.8904,
         coordinates: [2.883447447442, 35.93389997321875],
         defenseCampaign: false,
         liberationCampaign: false,
@@ -3146,7 +3146,7 @@ export const sectorData = [
     planets: [
       {
         name: "Vandalon IV",
-        planetLiberatedPercent: 0.0105,
+        planetLiberatedPercent: 0.0108,
         coordinates: [1.8162193916721414, -73.60860161689772],
         defenseCampaign: false,
         liberationCampaign: true,
@@ -3300,7 +3300,7 @@ export const sectorData = [
       [-2.359869939372891, -68.57834539694404],
     ],
 
-    liberatedPercent: 0.1334,
+    liberatedPercent: 1.06384,
     enemyType: "Automatons",
     planets: [
       {
@@ -3326,7 +3326,7 @@ export const sectorData = [
       },
       {
         name: "Malevelon Creek",
-        planetLiberatedPercent: 0.6679,
+        planetLiberatedPercent: 5.3199,
         coordinates: [-11.039915830014452, -72.64612495257451],
         defenseCampaign: false,
         liberationCampaign: true,
@@ -3369,12 +3369,12 @@ export const sectorData = [
       [7.465843311651555, -49.90669393684065],
       [10.764322002959819, -49.203761175989705],
     ],
-    liberatedPercent: 69.78115,
+    liberatedPercent: 72.18818,
     enemyType: "Automatons",
     planets: [
       {
         name: "Pöpli IX",
-        planetLiberatedPercent: 71.3814,
+        planetLiberatedPercent: 83.0766,
         coordinates: [1.640036642991903, -55.53377936138606],
         defenseCampaign: false,
         liberationCampaign: true,
@@ -3388,7 +3388,7 @@ export const sectorData = [
       },
       {
         name: "Ingmar",
-        planetLiberatedPercent: 40,
+        planetLiberatedPercent: 47.5268,
         coordinates: [2.430856371986533, -63.60729625569034],
         defenseCampaign: false,
         liberationCampaign: false,
@@ -3402,7 +3402,7 @@ export const sectorData = [
       },
       {
         name: "Draupnir",
-        planetLiberatedPercent: 36.1676,
+        planetLiberatedPercent: 30.3428,
         coordinates: [-14.55468697686062, -63.344029400441286],
         defenseCampaign: true,
         liberationCampaign: true,
@@ -3840,12 +3840,12 @@ export const sectorData = [
       [41.89275250919976, 48.7727192788742],
     ],
 
-    liberatedPercent: 0.00322,
+    liberatedPercent: 0.0046,
     enemyType: "Terminids",
     planets: [
       {
         name: "Hellmire",
-        planetLiberatedPercent: 0.0132,
+        planetLiberatedPercent: 0.018,
         coordinates: [27.8292172070015, 44.83164411210071],
         defenseCampaign: false,
         liberationCampaign: true,
@@ -3891,19 +3891,19 @@ export const sectorData = [
       [22.62662878784, 44.42330734337218],
     ],
 
-    liberatedPercent: 0.00937,
+    liberatedPercent: 0.01317,
     enemyType: "Terminids",
     planets: [
       {
         name: "Estanu",
-        planetLiberatedPercent: 0.0141,
+        planetLiberatedPercent: 0.0215,
         coordinates: [21.194401823026706, 49.57044750658364],
         defenseCampaign: false,
         liberationCampaign: true,
       },
       {
         name: "Crimsica",
-        planetLiberatedPercent: 0.0158,
+        planetLiberatedPercent: 0.0198,
         coordinates: [16.199243821548425, 52.290871677490514],
         defenseCampaign: false,
         liberationCampaign: true,
@@ -3944,7 +3944,7 @@ export const sectorData = [
       [26.50172840955768, 30.05706792004734],
     ],
 
-    liberatedPercent: 82.56448,
+    liberatedPercent: 77.38857,
     enemyType: "Terminids",
     planets: [
       {
@@ -3970,7 +3970,7 @@ export const sectorData = [
       },
       {
         name: "Erata Prime",
-        planetLiberatedPercent: 30.2588,
+        planetLiberatedPercent: 9.5546,
         coordinates: [25.63060645569419, 37.02139407304544],
         defenseCampaign: false,
         liberationCampaign: true,
