@@ -3684,14 +3684,14 @@ export const sectorData = [
     planets: [
       {
         name: "Veld",
-        planetLiberatedPercent: 75.6163,
+        planetLiberatedPercent: 84.1638,
         coordinates: [2.883447447442, 35.93389997321875],
         defenseCampaign: false,
         liberationCampaign: true,
       },
       {
         name: "Angel's Venture",
-        planetLiberatedPercent: 100.0,
+        planetLiberatedPercent: 75.6163,
         coordinates: [11.76936689568017, 36.19716682846781],
         defenseCampaign: false,
         liberationCampaign: true,
