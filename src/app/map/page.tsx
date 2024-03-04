@@ -41,7 +41,7 @@ export default async function PageMap() {
           Terminids
         </Heading>
       </Flex>
-      <Flex justifyContent={"center"}>
+      {/* <Flex justifyContent={"center"}>
         <Text
           color={"white"}
           textShadow={`
@@ -53,7 +53,7 @@ export default async function PageMap() {
         >
           This map is updated every 12 hours
         </Text>
-      </Flex>
+      </Flex> */}
       <MapComponent />;
       <Text
         color={"white"}
@@ -64,7 +64,7 @@ export default async function PageMap() {
 				  -2px -2px 0 #000;`}
         mb={1}
       >
-        Last updated March 3, 2024 4:50PM EST
+        Last updated March 4, 2024 6:14PM EST
       </Text>
     </>
   );
