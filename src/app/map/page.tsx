@@ -64,7 +64,7 @@ export default async function PageMap() {
 				  -2px -2px 0 #000;`}
         mb={1}
       >
-        Last updated March 4, 2024 6:14PM EST
+        Last updated March 5, 2024 8:44PM EST
       </Text>
     </>
   );
