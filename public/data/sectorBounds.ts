@@ -3029,12 +3029,12 @@ export const sectorData = [
       [26.55803787581629, -51.705648148577296],
     ],
 
-    liberatedPercent: 44.96928,
+    liberatedPercent: 41.81878,
     enemyType: "Automatons",
     planets: [
       {
         name: "Vandalon IV",
-        planetLiberatedPercent: 23.4943,
+        planetLiberatedPercent: 5.1402,
         coordinates: [1.8162193916721414, -73.60860161689772],
         defenseCampaign: false,
         liberationCampaign: true,
@@ -3188,7 +3188,7 @@ export const sectorData = [
       [-2.359869939372891, -68.57834539694404],
     ],
 
-    liberatedPercent: 8.87356,
+    liberatedPercent: 6.76922,
     enemyType: "Automatons",
     planets: [
       {
@@ -3214,7 +3214,7 @@ export const sectorData = [
       },
       {
         name: "Malevelon Creek",
-        planetLiberatedPercent: 44.3685,
+        planetLiberatedPercent: 33.8466,
         coordinates: [-11.039915830014452, -72.64612495257451],
         defenseCampaign: false,
         liberationCampaign: true,
@@ -3257,7 +3257,7 @@ export const sectorData = [
       [7.465843311651555, -49.90669393684065],
       [10.764322002959819, -49.203761175989705],
     ],
-    liberatedPercent: 91.54042,
+    liberatedPercent: 89.90612,
     enemyType: "Automatons",
     planets: [
       {
@@ -3290,7 +3290,7 @@ export const sectorData = [
       },
       {
         name: "Draupnir",
-        planetLiberatedPercent: 57.7038,
+        planetLiberatedPercent: 49.5311,
         coordinates: [-14.55468697686062, -63.344029400441286],
         defenseCampaign: false,
         liberationCampaign: true,
@@ -3945,33 +3945,33 @@ export const sectorData = [
       [26.50172840955768, 30.05706792004734],
     ],
 
-    liberatedPercent: 13.81537,
+    liberatedPercent: 10.74423,
     enemyType: "Terminids",
     planets: [
       {
         name: "Turing",
-        planetLiberatedPercent: 0.012,
+        planetLiberatedPercent: 0.02,
         coordinates: [2.5265028432043892, 46.14797838834595],
         defenseCampaign: false,
         liberationCampaign: true,
       },
       {
         name: "Meridia",
-        planetLiberatedPercent: 0.0111,
+        planetLiberatedPercent: 0.0229,
         coordinates: [9.690639674120565, 45.27042220418243],
         defenseCampaign: false,
         liberationCampaign: false,
       },
       {
         name: "Fenrir III",
-        planetLiberatedPercent: 55.2312,
+        planetLiberatedPercent: 43.092,
         coordinates: [18.38183030061814, 42.46224241485919],
         defenseCampaign: false,
         liberationCampaign: false,
       },
       {
         name: "Erata Prime",
-        planetLiberatedPercent: 0.0124,
+        planetLiberatedPercent: 0.0223,
         coordinates: [25.63060645569419, 37.02139407304544],
         defenseCampaign: false,
         liberationCampaign: true,
